@@ -1,5 +1,7 @@
 package com.codeagles.linklist;
 
+import com.codeagles.model.ListNode;
+
 import java.util.HashSet;
 import java.util.Set;
 

@@ -1,5 +1,7 @@
 package com.codeagles.linklist;
 
+import com.codeagles.model.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
