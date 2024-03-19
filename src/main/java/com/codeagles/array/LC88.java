@@ -9,19 +9,16 @@ package com.codeagles.array;
  */
 public class LC88 {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int cnt = m +n - 1;
-        int k = m -1;
-        int j = n -1;
-        for(int i = 0; i < m+n; i++) {
-            if( j < 0 ||(k >= 0 && nums1[k] >= nums2[j])) {
-                nums1[cnt] = nums1[k];
-                cnt--;
-                k--;
+        int length = m + n -1;
+        int nums1_index = m-1;
+        int nums2_index = n-1;
+        for (int i=0; i < m+n; i++) {
+            if (nums2_index < 0 || nums1_index >= 0 && nums1[nums1_index] >= nums2[nums2_index]) {
+                nums1[length--] = nums1[nums1_index--];
             }else{
-                nums1[cnt] = nums2[j];
-                cnt--;
-                j--;
+                nums1[length--] = nums2[nums2_index--];
             }
+
         }
     }
 }
